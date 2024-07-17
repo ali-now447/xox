@@ -4,7 +4,7 @@ import yt_dlp
 from pyrogram import filters
 from strings.filters import command
 from youtube_search import YoutubeSearch
-from AnonXMusic import app
+from ZelzalMusic import app
 
 @app.on_message(command(["/song", "بحث","تحميل","تنزيل","يوت","yt"]))
 def song(client, message):
@@ -50,7 +50,7 @@ def song(client, message):
         m.delete()
     except Exception as e:
         m.edit(
-            f"[Victorious]**\n\**خطأ :** {e}"
+            f"[Victorious] **\n\**خطأ :** {e}"
         )
         print(e)
 
